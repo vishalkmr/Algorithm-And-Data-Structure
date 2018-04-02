@@ -7,8 +7,6 @@ This Directory contanins the implementations  of various Algorithms and Data Str
     - Same problem is implemented using various possible method
     - Time complexity of each method is provided
 
-        ``` Eg. Time Complexity: O(nlogn)
-        ```
 
 
 
