@@ -13,7 +13,7 @@ def missing_element(arr1,arr2):
 	''' 
 	Funtion return missing element
 	Syntax: missing_element(arr1,arr2)
-    Time Complexity: O(nlogn)  	
+	Time Complexity: O(nlogn)  	
 	'''	
 	# Sort the arrays
 	arr1.sort()
@@ -30,7 +30,7 @@ def missing_element1(arr1,arr2):
 	''' 
 	Funtion return missing element
 	Syntax: missing_element(arr1,arr2)
-    Time Complexity: O(n)  	
+	Time Complexity: O(n)  	
 	'''
 	count={}
 

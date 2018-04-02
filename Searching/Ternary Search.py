@@ -12,8 +12,8 @@ def ternary_search(list,lower,middle,upper,item):
 	    funtion for binary search of element in list 
 	    synatx: ternary_search(list,lower,middle,upper,item)
 	    return index of element where the item is found
-    	Time Complexity: O(logn) 
-    	Space Complexity: O(logn) 
+	    Time Complexity: O(logn) 
+	    Space Complexity: O(logn) 
 	'''
 	if lower<=middle and middle<=upper:
 	    left_middle=(lower+middle)//2 #finding middle element index of left list
