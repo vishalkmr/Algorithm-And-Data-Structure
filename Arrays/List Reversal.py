@@ -10,7 +10,7 @@ def reverse(list):
 	''' 
 	Funtion to reverse list items
 	Syntax: reverse(list)
-    Time Complexity: O(n)  	
+	Time Complexity: O(n)  	
 	'''
 	length=len(list)-1
 	current=0

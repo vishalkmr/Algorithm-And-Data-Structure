@@ -13,8 +13,8 @@ def binary_search(list,lower,upper,item):
 	    funtion for binary search of element in list 
 	    synatx: binary_search( list,lower,upper,item)
 	    return index of element where the item is found
-    	Time Complexity: O(logn) 
-    	Space Complexity: O(logn) 
+	    Time Complexity: O(logn) 
+	    Space Complexity: O(logn) 
 	'''
 	if lower<=upper:
 		middle=(lower+upper)//2 #finding middle element index
