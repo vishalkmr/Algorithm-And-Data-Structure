@@ -20,7 +20,7 @@ def reverse(sentence):
 
 
 #using Parsing
-def reverse1(sentence):		
+def reverse(sentence):		
 	''' 
 	Funtion to reverse all the words in given sentence
 	Syntax: reverse(sentence)
