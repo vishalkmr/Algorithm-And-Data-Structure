@@ -41,10 +41,10 @@ def missing_element1(arr1,arr2):
 		else:
 			count[i]=1
 
-	#Compairing the elements count in array1 with Dictionary		
+	#Compairing the element count of array1 with Dictionary elements		
 	for i in arr1:
 		if i not  in count:
-			return i		
+			return i
 		elif count[i]==0:
 			return i
 		else:

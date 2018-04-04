@@ -62,7 +62,6 @@ def anagram(string1,string2):
 
 
 	
-
 string1='Anagram'
 string2='Naga Ram'
 

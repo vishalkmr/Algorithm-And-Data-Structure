@@ -19,15 +19,15 @@ def binary_search(list,lower,upper,item):
 	if lower<=upper:
 		middle=(lower+upper)//2 #finding middle element index
 
-		#if item is mathched with middle element
+		#if item is mathched with middle element then middle is the required index
 		if list[middle]==item:
 			return middle
 
-		#if item is greater than the middle element than apply Binary Search on right portion of list
+		#if item is greater than the middle element then apply Binary Search on right portion of list
 		elif list[middle]<item:
 			return  binary_search(list,middle+1,upper,item)
 
-		#if item is greater than the middle element than apply Binary Search on left portion of list
+		#if item is greater than the middle element then apply Binary Search on left portion of list
 		else:
 			return binary_search(list,lower,middle-1,item)	
 

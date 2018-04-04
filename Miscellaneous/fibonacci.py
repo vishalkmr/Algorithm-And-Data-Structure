@@ -9,6 +9,6 @@
 
 loop_counter=12
 a,b=0,1
-for i in range(loop_counter):
+for i in range(loop_counter): #Time Complexity: O(n) 
 	print(b)
 	a,b=b,a+b

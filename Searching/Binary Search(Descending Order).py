@@ -1,7 +1,7 @@
 '''
  Binary Search on Descending order Lists
  Assume that list is in Descending order
- Binary search is aplicable only when list is sorted
+ Note : Binary search is aplicable only when list is sorted
 '''
 
 def binary_search(list,item):

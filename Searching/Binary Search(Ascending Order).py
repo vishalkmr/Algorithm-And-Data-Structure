@@ -1,7 +1,7 @@
 '''
  Binary Search on Ascending order Lists
  Assume that list is in Ascending order
- Binary search is aplicable only when list is Sorted
+ Note : Binary search is aplicable only when list is sorted
 '''
 
 def binary_search(list,item):
@@ -18,7 +18,7 @@ def binary_search(list,item):
     mid=(beg+end)//2 #finding middle element index
 
     while(beg<=end):            
-        #if item is mathched with middle element
+        #if item is mathched with middle element 
         if(list[mid]==item):
             return mid
         

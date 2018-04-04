@@ -1,5 +1,5 @@
 '''
- Reverse the given list items
+ Reverse the given list items (Inplace Algorithm)
 
  Example
  reverse([1,2,3,4,5,6,7])
@@ -13,14 +13,18 @@ def reverse(list):
 	Time Complexity: O(n)  	
 	'''
 	length=len(list)-1
-	current=0
-	#swaping 1st and last elements at each iteration
-	while current<length-current:
-		list[current],list[length-current]=list[length-current],list[current]
-		current+=1
+	beg=0 #pointing to begining of the list
+	end=length #pointing to ending of the list
+	
+	while beg<end:
+
+		#swaping 1st and last elements at each iteration
+		list[beg],list[end]=list[end],list[beg]
+		
+		beg+=1 #incrementing the begining
+		end-=1 #dicrementing the ending
 
 		
-
 list=[1,2,3,4,5,6,7]
 reverse(list)
 print(list)
