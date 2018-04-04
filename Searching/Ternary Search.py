@@ -28,15 +28,15 @@ def ternary_search(list,lower,upper,item):
 	    	return second_middle
 
 
-        #if item is less than the first_middle element then apply Ternary Search on Left portion of list
+	    #if item is less than the first_middle element then apply Ternary Search on Left portion of list
 	    elif list[first_middle]>item:
 		    return  ternary_search(list,lower,first_middle-1,item)
 
-        #if item is between than the first_middle and second_middle then apply Ternary Search on Middle portion of list
+	    #if item is between than the first_middle and second_middle then apply Ternary Search on Middle portion of list
 	    elif list[first_middle]<item and item<list[second_middle]:    	
 		    return  ternary_search(list,first_middle+1,second_middle-1,item)
 
-        #if item is greater than the second_middle then apply Ternary Search on Right portion of list
+	    #if item is greater than the second_middle then apply Ternary Search on Right portion of list
 	    elif list[second_middle]<item :
 		    return  ternary_search(list,second_middle+1,upper,item)
 
