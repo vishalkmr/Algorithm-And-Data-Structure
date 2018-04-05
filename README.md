@@ -3,7 +3,7 @@ This Directory contanins the implementations  of various Algorithms and Data Str
 
 - KeyFeatures
     - Programs are well documented
-    - Each topic contains Basics concept implementations along with some Interview Problems 
+    - Each topic contains Basics concept implementations along with various standered problems
     - Same problem is implemented using various possible method
     - Time complexity of each method is provided
 
@@ -21,7 +21,7 @@ pair_sum([1,2,3,4,5,6,7],7)
 Returns: (3, 4), (2, 5), (1, 6)
 '''
  
- #usnig Soting
+#usnig Soting
 def pair_sum(list,k):
     ''' 
     Funtion return all the unique pairs of list elements that sum up to k
