@@ -6,9 +6,10 @@
 	In mathematical terms, the sequence F(n) of Fibonacci numbers is defined by the recurrence relation
 	    F(n) = F(n-1) + F(n-2)
 '''
+def fibonacci(n):	
+	a,b=0,1
+	for i in range(n): #Time Complexity: O(n) 
+		print(b)
+		a,b=b,a+b
 
-loop_counter=12
-a,b=0,1
-for i in range(loop_counter): #Time Complexity: O(n) 
-	print(b)
-	a,b=b,a+b
+fibonacci(10)
