@@ -16,9 +16,6 @@ def swap_pairs(linked_list):
     Time Complexity: O(n)           
     """
     
-    # if linked-list is empty or it contains single element
-    if linked_list.size==0 or linked_list.size==1:
-        return
     current=linked_list.head
     previous=None
     while current and current.next:            

@@ -9,7 +9,7 @@ def intersection(first_linked_list,second_linked_list):
     """
     Returns the node where the first_linked_list intercept with second_linked_list
     Syntax: intersection(first_linked_list,second_linked_list)
-    Time Complexity: O(n)           
+    Time Complexity: O(m+n)           
     """
     #if first_linked_list is large
     if first_linked_list.size > second_linked_list.size:
@@ -71,5 +71,8 @@ print(first_linked_list )
 print(second_linked_list )
 
 result=intersection(first_linked_list,second_linked_list)
-print(result)
+if result!=False:
+    print('Intersecting point : '+result)
+else:
+    print('No point of Intersection')
 

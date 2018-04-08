@@ -11,7 +11,8 @@ def max_min(list,index,minimum,maximum):
 	Funtion to return maximum and minimum element in the given list 
 	Syntax: max_min(list,index,minimum,maximum)
 	Time Complexity: O(n)  	
-	Space Complexity: O(n) 	
+	Space Complexity: O(n)
+	Recurence Relation : T(n)=T(n-1)+C  (C represents constant) 	
 	'''
 
 	if index <len(list):

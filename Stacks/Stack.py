@@ -114,14 +114,14 @@ class Stack:
 if __name__ == '__main__':
     obj=Stack()
     while(1):
-        print("\n------------")
+        print("\n-----------------------------------")
         print("Stack Menu")
         print("1.Push")
         print("2.Pop")
         print("3.Peek")
         print("4.Display")
         print("5.Exit")
-        print("------------")
+        print("------------------------------------")
         choice=int(input("\nEnter your choice : "))
         if(choice==1):
             item=input("\nEnter the element you want to insert in stack : ")

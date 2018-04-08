@@ -9,11 +9,12 @@
 
 def ternary_search(list,lower,upper,item):
 	''' 
-	    funtion for binary search of element in list 
-	    synatx: ternary_search(list,lower,upper,item)
-	    return index of element where the item is found
-	    Time Complexity: O(logn) 
-	    Space Complexity: O(logn) 
+	Funtion for binary search of element in list 
+	Synatx: ternary_search(list,lower,upper,item)
+	Return index of element where the item is found
+	Time Complexity: O(logn) 
+	Space Complexity: O(logn) 
+	Recurence Relation : T(n)=T(n/3)+C  (C represents constant)
 	'''
 	if lower<=upper:
 	    first_middle=lower+((upper-lower)//3) #finding 1st middle element which is at (n/3)rd index of list

@@ -34,6 +34,9 @@ def rotate_right(linked_list,k):
     
     previous.next=None
 
+    #previous represent new likedlist last element
+    linked_list.tail=previous #update the new linked_list tail
+
     #now list is splited into two portion
     #1st contains node form begining of original linked_list to previous node (left list)
     #2nd contains from current node to last node (right list)

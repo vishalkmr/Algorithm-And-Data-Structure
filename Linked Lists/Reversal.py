@@ -15,12 +15,12 @@ def reversal(linked_list):
     Syntax: reversal() 
     Time Complexity: O(n)         
     """              
-
     previous=linked_list.head
     current=linked_list.head        
     ahead=current.next
     linked_list.head.next=None #1st element become last element
-    
+    linked_list.tail=linked_list.head # now tail points to 1st element 
+
     while ahead:
         current=ahead
         ahead=ahead.next

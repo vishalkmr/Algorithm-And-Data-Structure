@@ -77,6 +77,7 @@ class LinkedList:
         ptr = self.head
         print('-'*17,'Linked-List','-'*17)
         print(' Head : '+str(self.head.data))
+        print(' Tail : '+str(self.tail.data))
         while ptr is not None:
             print(' '+str(ptr.data),end=' ==>')
             ptr = ptr.next
@@ -110,7 +111,7 @@ class LinkedList:
         """
         Function to insert new node at the end of linked-list
         Syntax: insert_end(data) 
-        Time Complexity: O(n)           
+        Time Complexity: O(1)           
         """    
         self.size = self.size + 1
         new_node = Node(data) #creating new node
@@ -120,15 +121,10 @@ class LinkedList:
             self.head = new_node
             self.tail=new_node
 
-        #if some element exists in linked-list   
+        #if some element exists in linked-list
         else:
-            ptr=self.head
-            #iterating until ptr points to last element of linked-list
-            while ptr.next is not None:
-                ptr = ptr.next
-         
-            ptr.next = new_node
-            self.tail=new_node
+            self.tail.next=new_node #appending the newnode at the end
+            self.tail=new_node #updating the tail
 
 
     def insert(self, data,index):
@@ -195,6 +191,15 @@ class LinkedList:
         if self.size==0:
             raise IndexError("Deletion is not Possible Because Linked-List is Empty")
 
+        #if only one node is present    
+        elif self.size==1:
+            data=self.head.data
+            self.head=None
+            self.tail=None
+            self.size=0
+            return data        
+
+
         self.size = self.size - 1
         previous=None
         current=self.head
@@ -206,7 +211,7 @@ class LinkedList:
 
         data=current.data
         previous.next=None   
-        self.tail=previous     
+        self.tail=previous     #updating tail
         del current #deallocating the memory
         return data
 
@@ -221,7 +226,8 @@ class LinkedList:
         # if linked-list is empty
         if self.size==0:
             raise IndexError("Deletion is not Possible Because Linked-List is Empty")
-                   
+
+                 
         current = self.head
         previous = None
         
@@ -236,6 +242,9 @@ class LinkedList:
                 self.head = current.next
                 del ptr
             else:
+                #if node is last node the update the tail
+                if current.data == self.tail.data:
+                    self.tail=previous
                 ptr=current
                 previous.next = current.next     
                 del ptr
@@ -251,7 +260,7 @@ class LinkedList:
 if __name__ == '__main__':
     obj=LinkedList()
     while(1):
-        print("\n------------")
+        print("\n--------------------------------------------------------------")
         print("Queue Menu")
         print("1.Insert at Beginning")
         print("2.Insert at End")
@@ -261,7 +270,7 @@ if __name__ == '__main__':
         print("6.Remove Given Node")
         print("7.Traversal")
         print("8.Exit")
-        print("------------")
+        print("--------------------------------------------------------------")
         choice=int(input("\nEnter your choice : "))
         if(choice==1):
             data=input("\nEnter the element you want to insert in Linked-List : ")

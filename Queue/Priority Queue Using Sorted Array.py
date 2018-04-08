@@ -134,14 +134,14 @@ class Priority_Queue:
 if __name__ == '__main__':
     obj=Priority_Queue()
     while(1):
-        print("\n------------")
+        print("\n------------------------------------")
         print("Priority Queue Menu")
         print("1.Enqueue")
         print("2.Dequeue")
         print("3.Peek")
         print("4.Display")
         print("5.Exit")
-        print("------------")
+        print("------------------------------------")
         choice=int(input("\nEnter your choice : "))
         if(choice==1):
             item=int(input("\nEnter the element you want to insert in Priority Queue : "))

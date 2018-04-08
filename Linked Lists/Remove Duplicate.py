@@ -24,6 +24,10 @@ def remove_duplicate(linked_list):
         #if the node is already present in unique_item_set
         #means repeatation of that node take place 
         if current.data  in unique_item_set:
+            #if the repeated item is last element then update the tail 
+            if current is linked_list.tail:
+                linked_list.tail=previous
+            
             previous.next=current.next #skiping that repeated node
             linked_list.size-=1
         
@@ -33,7 +37,7 @@ def remove_duplicate(linked_list):
             unique_item_set.add(current.data)
             previous=current
 
-        #increamneting loop counter    
+        #incrementing loop counter    
         current=current.next
 
 
@@ -48,6 +52,7 @@ linked_list.insert_end(6)
 linked_list.insert_end(3)
 linked_list.insert_end(1)
 linked_list.insert_end(4)
+
 
 print(linked_list)
 remove_duplicate(linked_list)

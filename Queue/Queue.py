@@ -118,14 +118,14 @@ class Queue:
 if __name__ == '__main__':
     obj=Queue()
     while(1):
-        print("\n------------")
+        print("\n------------------------------------")
         print("Queue Menu")
         print("1.Enqueue")
         print("2.Dequeue")
         print("3.Peek")
         print("4.Display")
         print("5.Exit")
-        print("------------")
+        print("------------------------------------")
         choice=int(input("\nEnter your choice : "))
         if(choice==1):
             item=input("\nEnter the element you want to insert in queue : ")

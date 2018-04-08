@@ -5,6 +5,34 @@
 from LinkedList import LinkedList
 
 
+#using Set
+def is_cyclic(linked_list):
+    """
+    Returns True if linked-list is cyclic
+    Syntax: is_cyclic(linked_list) 
+    Time Complexity: O(n)           
+    """
+    # if linked-list is empty
+    if not linked_list.head or not linked_list.head.next:
+        return False
+
+    visited=set()
+    current=linked_list.head
+
+    while  current:
+        #if the node is already in visited set that mean linked-list is cyclic
+        if current.data in visited:
+            return True
+        #if the node is not visited set that means it appears 1st time so add it on the visited set
+        else:
+            visited.add(current.data)
+        #incement the loop counter    
+        current=current.next           
+
+    return False    
+
+
+
 def is_cyclic(linked_list):
     """
     Returns True if linked-list is cyclic
