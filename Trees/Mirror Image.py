@@ -7,7 +7,7 @@
              / \    / \
             4   5  6   7
 
-Mirror Image :
+ Mirror Image :
                  1
                 /  \
               3      2
@@ -64,13 +64,14 @@ def preorder(root):
 
 
 
-a=Node('1')
-b=Node('2')
-c=Node('3')
-d=Node('4')
-e=Node('5')
-f=Node('6')
-g=Node('7')
+
+a=Node(1)
+b=Node(2)
+c=Node(3)
+d=Node(4)
+e=Node(5)
+f=Node(6)
+g=Node(7)
 a.left=b
 a.right=c
 b.left=d

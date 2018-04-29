@@ -37,7 +37,7 @@ class BinarySearchTree:
             self.root=Node(data)
             self.nodes+=1
         
-        #otherwise find the appropriate postion for the new node in BST
+        #otherwise recursively find out the appropriate postion for the new node in BST
         else:
             if root.left==None and data < root.data:
                 self.nodes+=1
@@ -66,41 +66,76 @@ class BinarySearchTree:
     def delete(self,data):
          target=self.search(self.root,data)
          
+         if not target:
+            return False
+         # if target is self.root:
+         #    print('root')
+         #    predessor=self.predessor(target)
+            
+         #    # if predessor:
+            #     target.data=predessor.data
+            #     self.delete(predessor)
+            # else:
+            #     successor=self.successor(target)
+            #     target.data=successor.data
+            #     self.delete(successor)
+                    
+
          parent=self.parent(self.root,target)
 
          print(target)
          # print(predessor)
          print(parent)
 
-         #0 childs
+         #Deletion of leaf node 
          if target.left==None and target.right==None:
-            print('0')
-            if parent.left==target:
+            if parent.left is target:
+                print('0 left')
                 parent.left==None
+            
             else:
+                print('0 right')
                 parent.right=None
+
+            del target
+            self.nodes-=1
+            return True
          
-         #1 left childs
+         #When node have only left child
          elif target.left!=None and target.right==None:
-            print('1 left')
-            if parent.left==target:
+            if parent.left is target:
+                print('1 left left')
                 parent.left==target.left
+                
             else:
-                parent.right=target.left                
-         
-         #1 right childs       
+                print('1 left right')
+                parent.right=target.left             
+            
+            del target
+            self.nodes-=1
+            return True
+
+         #When node have only right child
          elif target.left==None and target.right!=None:
-            print('1 right')
-            if parent.left==target:
+            if parent.left is target:
+                print('1 right left')
                 parent.left==target.right
+
             else:
+                print('1 right right')
                 parent.right=target.right
-         
-         else:
+
+            del target
+            self.nodes-=1
+            return True
+
+         #Deletion of intermediate node
+         elif target.left!=None and target.right!=None:
             print('2')
-            successor=self.successor(target)
-            target.data=successor.data
-            self.delete(self.root,successor)
+            predessor=self.predessor(target)
+            temp=predessor.data
+            self.delete(predessor)
+            target.data=predessor.data
 
 
 
@@ -108,7 +143,7 @@ class BinarySearchTree:
     def parent(self,root,node):
         if root==None:
             return None   
-        if root.left==node or root.right==node:
+        if root.left is node or root.right is node:
             return root
         elif root.data<=node.data:
             return self.parent(root.right,node)
@@ -215,14 +250,15 @@ if __name__ == '__main__':
             data=int(input("\nEnter the element you want to insert in Binary Search Tree : "))
             bst.insert(bst.root,data)
         elif(choice==2):
-            data=input("\nEnter the data of node you want to delete from Binary Search Tree : ")
+            data=int(input("\nEnter the data of node you want to delete from Binary Search Tree : "))
             if bst.delete(data):
                 print('\nDeletion Successful')
             else:
                 print('\nDeletion Failed ')
         elif(choice==3):
             data=int(input("\nEnter the element you want to Search in Binary Search Tree : "))
-            if bst.search(bst.root,data):
+            result=bst.search(bst.root,data)
+            if result!=False:
                 print('Search Successful')
             else:
                 print('Search UnSuccessful')

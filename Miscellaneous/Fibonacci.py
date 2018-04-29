@@ -8,8 +8,9 @@
 '''
 def fibonacci(n):	
 	a,b=0,1
-	for i in range(n): #Time Complexity: O(n) 
+	print(a)
+	for i in range(n-1): #Time Complexity: O(n) 
 		print(b)
 		a,b=b,a+b
 
-fibonacci(10)
+fibonacci(5)

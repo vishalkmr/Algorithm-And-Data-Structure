@@ -3,15 +3,15 @@
  Levels = Height+1
 
  Exapmle :
-                 1
+                 1            height-4      level-5
                 /  \
-              2      3
+              2      3        height-3      level-4    
              / \    / 
-            4   5  6   
+            4   5  6          height-2      level-3
            /    
-          7
+          7                   height-1      level-2
          / 
-        8 
+        8                     height-0      level-1
 			
  Levels : 5
 '''
@@ -33,7 +33,7 @@ def levels(root):
     if not root:
         return 0 
 
-    #if leaf node return 1 (Bcz. leaf node is present at 0th level)
+    #if leaf node return 1 (Bcz. leaf node is present at level 1)
     if root.left==None and root.right==None:
       return 1
 
@@ -48,14 +48,14 @@ def levels(root):
     
     
 
-a=Node('1')
-b=Node('2')
-c=Node('3')
-d=Node('4')
-e=Node('5')
-f=Node('6')
-g=Node('7')
-h=Node('8')
+a=Node(1)
+b=Node(2)
+c=Node(3)
+d=Node(4)
+e=Node(5)
+f=Node(6)
+g=Node(7)
+h=Node(8)
 a.left=b
 a.right=c
 b.left=d

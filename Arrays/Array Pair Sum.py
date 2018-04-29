@@ -76,5 +76,5 @@ def pair_sum(list,k):
 
 
 list=[1,2,3,4,5,6,7]
-pairs=pair_sum([1,2,3,4,5,6,7],7)
+pairs=pair_sum(list,7)
 print(pairs)

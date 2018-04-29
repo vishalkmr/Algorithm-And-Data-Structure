@@ -7,7 +7,7 @@
              / \    / \
             4   5  6   7
 
- intermedaite(Non-Leaf) Nodes : 4 (i.e. 4,5,6,7)
+ intermedaite(Non-Leaf) Nodes : 3 (i.e. 1,2,3)
 '''
 
 
@@ -39,16 +39,17 @@ def non_leaf(root):
     total_non_leaf=left_subtree_non_leaf+right_subtree_non_leaf+1
     
     return total_non_leaf
+ 
     
     
 
-a=Node('1')
-b=Node('2')
-c=Node('3')
-d=Node('4')
-e=Node('5')
-f=Node('6')
-g=Node('7')
+a=Node(1)
+b=Node(2)
+c=Node(3)
+d=Node(4)
+e=Node(5)
+f=Node(6)
+g=Node(7)
 a.left=b
 a.right=c
 b.left=d

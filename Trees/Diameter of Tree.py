@@ -33,13 +33,15 @@ def diameter(root):
     if not root:
         return 0 
 
-    #levels gives the maximum nodes on the longest path from leaf to root    
+    #number of levels gives the maximum nodes on the longest path from leaf to root    
+    #so diameter is number of levels in right-subtree + number of levels in left-subtree + 1(for root)
+    
     #recursively compute the levels of left and right subtree 
     left_subtree_levels=levels(root.left)
     right_subtree_levels=levels(root.right)
 
-    #compute the overall diameter of tree by considering nodes in leftsubtree ,rightsubtree and root
-    total_diameter =(left_subtree_levels+right_subtree_levels+1)
+    #compute the overall diameter of tree 
+    total_diameter =left_subtree_levels+right_subtree_levels+1
 
     return total_diameter
 
@@ -50,13 +52,13 @@ def levels(root):
     Time Complexity: O(n)
     Recurrence Relation :
         Best Case : T(n)=2T(n/2)+C (C represents constant)    
-        Worst Case : T(n)=T(n-1)+C  (C represents constant)               
+        Worst Case : T(n)=T(n-1)+C  (C represents constant)          
     """
    # if Tree is empty
     if not root:
         return 0 
 
-    #if leaf node return 1 (Bcz. leaf node is present at 0th level)
+    #if leaf node return 1 (Bcz. leaf node is present at level 1)
     if root.left==None and root.right==None:
       return 1
 
@@ -70,14 +72,14 @@ def levels(root):
     return total_levels
     
 
-a=Node('1')
-b=Node('2')
-c=Node('3')
-d=Node('4')
-e=Node('5')
-f=Node('6')
-g=Node('7')
-h=Node('8')
+a=Node(1)
+b=Node(2)
+c=Node(3)
+d=Node(4)
+e=Node(5)
+f=Node(6)
+g=Node(7)
+h=Node(8)
 a.left=b
 a.right=c
 b.left=d

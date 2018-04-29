@@ -15,9 +15,10 @@ def binary_search(list,item):
     beg=0
     length=len(list)
     end=length-1
-    mid=(beg+end)//2 #finding middle element index
 
     while(beg<=end):            
+        mid=(beg+end)//2 #finding middle element index
+
         #if item is mathched with middle element 
         if(list[mid]==item):
             return mid
@@ -30,7 +31,7 @@ def binary_search(list,item):
         elif(list[mid]<item):
             beg=mid+1
         
-        mid=(beg+end)//2 #finding middle element index
+
     
     if(beg>end ):
         return -1

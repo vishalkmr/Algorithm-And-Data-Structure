@@ -33,18 +33,21 @@ def strict_binary_tree(root):
     if root.left==None and root.right==None:
       return True
 
+    #recursively check for left and right subtree  
     if root.left!=None and root.right!=None:
     	return strict_binary_tree(root.left) and strict_binary_tree(root.right) 
+   
     else:
     	return False
 
-a=Node('1')
-b=Node('2')
-c=Node('3')
-d=Node('4')
-e=Node('5')
-f=Node('6')
-g=Node('7')
+
+a=Node(1)
+b=Node(2)
+c=Node(3)
+d=Node(4)
+e=Node(5)
+f=Node(6)
+g=Node(7)
 a.left=b
 a.right=c
 b.left=d

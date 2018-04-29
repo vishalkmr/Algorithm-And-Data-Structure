@@ -13,7 +13,7 @@ Inorder Traversal : 4,2,5,1,6,3,7
 
 from TreeNode import Node
 
-
+#using Recursion
 def inorder(root):
     """
     Function to find Inorder traversal of the given Tree
@@ -31,14 +31,41 @@ def inorder(root):
     print(root.data)    #root
     inorder(root.right) #right
     
+#using Stack
+def inorder(root):
+    """
+    Function to find Inorder traversal of the given Tree
+    Syntax: inorder(root) 
+    Time Complexity: O(n) 
+	"""
+    current=root
+    stack=[]
+    
+    #move to the left most leaf node
+    while current != None:
+        stack.append(current) #while moving push node onto stack
+        current=current.left
+    
+    #now perform the backtracking and print the nodes data
+    while len(stack)!=0:
+        item=stack.pop()
+        print(item.data)
 
-a=Node('1')
-b=Node('2')
-c=Node('3')
-d=Node('4')
-e=Node('5')
-f=Node('6')
-g=Node('7')
+        #if node have right children then again move to the left most leaf node
+        if item.right!=None:
+            current=item.right
+            while current != None:
+                stack.append(current) #while moving push node onto stack
+                current=current.left 		
+
+
+a=Node(1)
+b=Node(2)
+c=Node(3)
+d=Node(4)
+e=Node(5)
+f=Node(6)
+g=Node(7)
 a.left=b
 a.right=c
 b.left=d
