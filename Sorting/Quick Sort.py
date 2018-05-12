@@ -56,6 +56,6 @@ def partition(list,lb,ub):
     return j
 
 
-list=[6,10,13,5,8,3,2,11]
+list=[6,10,13,5,8,3,2,-11,0,1]
 quick_sort(list,0,len(list)-1)
 print(list)
