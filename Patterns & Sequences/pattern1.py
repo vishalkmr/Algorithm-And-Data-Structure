@@ -1,15 +1,15 @@
 """
   Program to print the pattern
 	
-	 x   	n=1
+	 x       n=1
 
 	+x+
-	xxx		n=3    
+	xxx      n=3    
 	+x+	
 
 	++x++
 	+xxx+		    
-	xxxxx   n=5
+	xxxxx    n=5
 	+xxx+
 	++x++
 
