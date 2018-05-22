@@ -8,28 +8,32 @@
 	n=5
 """
 
+#taking input
 n=int(input("enter the number : "))
+
 #initialization of variable
 space1=n-1
 space2=2*n-2
 stars=1
-i=0
-#loop for executes the code n times
+
+#loop for n lines
 for i in range(0,n):
-    #loop print spaces1
+    #loop to print spaces1
 	for i in range(0,space1): 
 		print(" ",end='')
-	#loop print stars	
-	for i in range(0,stars):  
-		print("*",end='')
-    #loop print spaces2
-	for i in range(0,space2): 
-		print(" ",end='')
-	#loop print stars	
+	
+	#loop to print stars	
 	for i in range(0,stars):  
 		print("*",end='')
     
+    #loop to print spaces2
+	for i in range(0,space2): 
+		print(" ",end='')
 	
+	#loop to print stars	
+	for i in range(0,stars):  
+		print("*",end='')
+    
 	#upadation in the values of stars and space
 	stars=stars+2
 	space1=space1-1
