@@ -1,3 +1,20 @@
+"""
+   Job Seqeuencing 
+------------------------
+Name	Profit	Deadline
+------------------------
+J1 		 25  	 2
+J2 		 120  	 1
+J3 		 50  	 2
+J4 		 80  	 1
+------------------------
+Profit : 170
+Alloction : ['J2', 'J3']
+Panality : 105
+Left Out Jobs : ['J4', 'J1
+------------------------
+"""
+
 import functools
 
 @functools.total_ordering
@@ -40,16 +57,16 @@ def job_sequencing(job_list):
 	panality=0
 	left_out_jobs=[]
 
-	#creating empty deadline slots
-	deadline_list=[None]*(deadline+1)
+	#Creating empty deadline slots
+	deadline_list=['$']*(deadline)
 	
 	for job in job_list:
 		allocation=True
 		
 		while allocation:
 			#if deadline slot for job is empty then allocate the job
-			if deadline_list[job.deadline] is None:
-				deadline_list[job.deadline]=job.name
+			if deadline_list[job.deadline-1] is '$':
+				deadline_list[job.deadline-1]=job.name
 				profit+=job.profit
 				allocation=False
 			
@@ -62,8 +79,13 @@ def job_sequencing(job_list):
 				allocation=False
 				left_out_jobs.append(job.name)
 				panality+=job.profit
-
-	return profit,panality,left_out_jobs
+	
+	#Removing the gaps if any
+	try :
+		deadline_list.remove('$')
+	except:
+		pass
+	return profit,deadline_list,panality,left_out_jobs
  
 
 job_list=[]
@@ -83,12 +105,30 @@ job_list.append(Job('J4',80,1))
 # job_list.append(Job('J6',45,2))
 # job_list.append(Job('J7',35,1))
 
+
+#example 3  (Contains Gap)
+# job_list.append(Job('J1',77,2)) 
+# job_list.append(Job('J2',21,5))
+# job_list.append(Job('J3',45,3))
+# job_list.append(Job('J4',95,7))
+# job_list.append(Job('J5',100,5))
+# job_list.append(Job('J6',80,4))
+# job_list.append(Job('J7',70,1))
+# job_list.append(Job('J8',60,2))
+# job_list.append(Job('J9',29,3))
+
+
+print("------------------------")
 print('Name\tProfit\tDeadline')
+print("------------------------")
 for job in job_list:
 	print(job)
+print("------------------------")
 
 result=job_sequencing(job_list)
 
-print("  Profit : "+str(result[0]))
-print("  Panality : "+str(result[1]))
-print("  Left Out Jobs : "+str(result[2]))
+print("Profit : "+str(result[0]))
+print("Alloction : "+str(result[1]))
+print("Panality : "+str(result[2]))
+print("Left Out Jobs : "+str(result[3]))
+print("------------------------")

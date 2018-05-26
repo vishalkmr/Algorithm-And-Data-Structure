@@ -1,3 +1,16 @@
+"""
+       Fractional Knapsack
+--------------------------------------------
+Name  Weight	Profit	P/W Ratio	Fraction
+--------------------------------------------
+obj2	5		300		60.0		1
+obj3	12		360		30.0		1
+obj1	10		250		25.0		1
+obj4	8		200		25.0		0.125
+--------------------------------------------
+ 	   Total Profit : 935.0
+--------------------------------------------
+"""
 import functools
 
 @functools.total_ordering
@@ -17,6 +30,7 @@ class Item(object):
 
 	def __eq__(self, other):
 		return self.pw_ratio == other.pw_ratio
+
 
 def fractional_knapsack(item_list,max_weight):
 	''' 
@@ -44,19 +58,22 @@ def fractional_knapsack(item_list,max_weight):
 	return profit		
 	
 
-
 item_list=[]
 
 item_list.append(Item('obj1',10,250))
 item_list.append(Item('obj2',5,300))
 item_list.append(Item('obj3',12,360))
 item_list.append(Item('obj4',8,200))
+
 max_weight=28
 
 profit=fractional_knapsack(item_list,max_weight)
 
+print("--------------------------------------------")
 print('Name  Weight\tProfit\tP/W Ratio\tFraction')
+print("--------------------------------------------")
 for item in item_list:
 	print(item)
-
-print(" \t Total Profit : "+str(profit))
+print("--------------------------------------------")
+print("\t\tTotal Profit : "+str(profit))
+print("--------------------------------------------")

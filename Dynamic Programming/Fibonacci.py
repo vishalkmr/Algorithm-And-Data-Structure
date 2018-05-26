@@ -40,7 +40,8 @@ def fibonacci(n):
 		memory[n]=memory[n-1]+memory[n-2]	
 		return memory[n]
 
-n=6
+n=7
 memory=[None]*(n+1)
+
 result=fibonacci(n)
 print(result)
