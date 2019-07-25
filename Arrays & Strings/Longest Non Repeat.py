@@ -6,7 +6,6 @@ largest_non_repeat('abcdabcbb')
 Returns: 'abcd'
 '''
 
-#using Set
 def largest_non_repeat(string):
 	''' 
 	Funtion return the longest substring without repeating characters in the given string
