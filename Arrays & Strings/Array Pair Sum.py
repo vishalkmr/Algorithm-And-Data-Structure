@@ -6,7 +6,7 @@ pair_sum([1,2,3,4,5,6,7],7)
 Returns: (3, 4), (2, 5), (1, 6)
 '''
  
-#usnig Sorting
+#using Sorting
 def pair_sum(list,k):
 	''' 
 	Funtion return all the unique pairs of list elements that sum up to k
