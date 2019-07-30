@@ -3,7 +3,7 @@
  For example, the string 'abcde' has all unique characters and should return True. 
  The string 'aabcde' contains duplicate characters and should return false.
  
- Assume that the sollution is case sensitive i.e. string 'ABBabb' retruns True
+ Assume that the sollution is case sensitive i.e. string 'ABab' retruns True
 
  Example
  compression('abcdefg')
