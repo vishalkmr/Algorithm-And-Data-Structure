@@ -1,6 +1,6 @@
 """
     program to print the pattern
-		*
+	    *
 	   * *
 	  *   *
 	 *     *
@@ -8,7 +8,7 @@
 	 *     *		
 	  *   *		
 	   * *	
-		*
+	    *
 
 	n=5
 """
